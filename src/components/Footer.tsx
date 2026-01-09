@@ -9,9 +9,9 @@ const Footer = () => {
   };
 
   return (
-    <footer className="py-16 border-t border-border/50 relative">
+    <footer className="py-10 sm:py-16 border-t border-border/50 relative">
       <div className="section-container">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-8">
+        <div className="flex flex-col items-center gap-8 md:flex-row md:justify-between">
           {/* Logo & Info */}
           <div className="text-center md:text-left">
             <motion.a
@@ -20,13 +20,13 @@ const Footer = () => {
                 e.preventDefault();
                 scrollToTop();
               }}
-              className="text-2xl font-bold tracking-tight inline-block mb-4"
+              className="text-xl sm:text-2xl font-bold tracking-tight inline-block mb-3 sm:mb-4"
               whileHover={{ scale: 1.05 }}
             >
               <span className="gradient-text">BLACK</span>
               <span className="text-foreground ml-1">VISION</span>
             </motion.a>
-            <p className="text-sm text-muted-foreground max-w-xs">
+            <p className="text-xs sm:text-sm text-muted-foreground max-w-xs mx-auto md:mx-0">
               Sistemas digitais, automação e tráfego estratégico.
               <br />
               Ativo desde <span className="text-foreground font-medium">2022</span>.
@@ -34,12 +34,12 @@ const Footer = () => {
           </div>
 
           {/* Links */}
-          <div className="flex items-center gap-6">
+          <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-6">
             <motion.a
               href="https://instagram.com/blackvision.br"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors"
+              className="flex items-center gap-2 text-xs sm:text-sm text-muted-foreground hover:text-primary transition-colors"
               whileHover={{ x: 4 }}
             >
               <Instagram className="w-4 h-4" />
@@ -48,7 +48,7 @@ const Footer = () => {
 
             <motion.a
               href="mailto:getblackvision.br@gmail.com"
-              className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors"
+              className="flex items-center gap-2 text-xs sm:text-sm text-muted-foreground hover:text-primary transition-colors"
               whileHover={{ x: 4 }}
             >
               <Mail className="w-4 h-4" />
@@ -61,14 +61,14 @@ const Footer = () => {
             onClick={scrollToTop}
             whileHover={{ scale: 1.1, y: -4 }}
             whileTap={{ scale: 0.9 }}
-            className="p-3 glass-card hover:border-primary/50 transition-all duration-300"
+            className="p-2.5 sm:p-3 glass-card hover:border-primary/50 transition-all duration-300"
           >
-            <ArrowUp className="w-5 h-5 text-muted-foreground" />
+            <ArrowUp className="w-4 h-4 sm:w-5 sm:h-5 text-muted-foreground" />
           </motion.button>
         </div>
 
-        <div className="mt-12 pt-8 border-t border-border/30 text-center">
-          <p className="text-sm text-muted-foreground">
+        <div className="mt-8 sm:mt-12 pt-6 sm:pt-8 border-t border-border/30 text-center">
+          <p className="text-xs sm:text-sm text-muted-foreground">
             © {currentYear} Black Vision. Todos os direitos reservados.
           </p>
         </div>
